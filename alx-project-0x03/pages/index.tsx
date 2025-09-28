@@ -1,14 +1,11 @@
 import Button from "@/components/common/Button";
 import { useRouter } from "next/router";
-
-interface PageRouteProps {
-  pageRoute: string;
-}
+import { PageRouteProps } from "@/interface";
 
 export default function Home() {
   const router = useRouter();
 
-  // Imperative routing with useRouter
+  // Imperative routing
   const routeToNextPage = ({ pageRoute }: PageRouteProps) => {
     router.push(pageRoute, undefined, { shallow: false });
   };
